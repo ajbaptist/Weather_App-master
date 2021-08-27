@@ -50,6 +50,8 @@ class _HourScreenState extends State<HourScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double w = MediaQuery.of(context).size.width;
+
     return ListView.builder(
       scrollDirection: Axis.horizontal,
       itemCount: weatherhourdata.length,
@@ -57,7 +59,7 @@ class _HourScreenState extends State<HourScreen> {
         decoration: BoxDecoration(
           color: Color(0xFFFFC043),
         ),
-        width: 60.0,
+        width: w * 0.2,
         child: Column(
           children: [
             Image.network(

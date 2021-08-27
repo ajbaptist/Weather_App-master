@@ -49,6 +49,8 @@ class _WeekWeatherScreenState extends State<WeekWeatherScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double w = MediaQuery.of(context).size.width;
+
     return ListView.builder(
       scrollDirection: Axis.horizontal,
       itemCount: weatherweekdata.length,
@@ -56,7 +58,7 @@ class _WeekWeatherScreenState extends State<WeekWeatherScreen> {
         decoration: BoxDecoration(
           color: Color(0xFFFFC043),
         ),
-        width: 80.0,
+        width: w * 0.2,
         child: Column(
           children: [
             Image.network("http://openweathermap.org/img/wn/" +
